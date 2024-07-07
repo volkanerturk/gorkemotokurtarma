@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    /* Turuncu arka plan */
+    color: #2d3436;
+    text-align: center;
+    display: flex;
+    max-width: 100%;
+    background-color:#b2bec3;
+}
+
+.header-content {
+    margin: 0 auto;
+    padding: rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.image-content img {
+    width: 500px;
+    height: 350px;
+}
+
+.header-content-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.contact-links {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.header-web-image {
+    width: 900px;
+}
+
+.header-mobile-image, .mobile-contact-links {
+    display: none;
+}
+
+.contact-link {
+    display: flex;
+    color: #fafafa;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2ecc71;
+    border: none;
+    width: 120px;
+    gap: 10px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Kutular ve slider'i üste hizala */
+    width: 100%;
+    max-width: 1200px;
+    /* Maksimum genişlik */
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Kutular arasında boşluk bırak */
+    width: 40%;
+    /* Kutular genişlik ayarı */
+}
+
+.box {
+    background-color:#dfe6e9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 40%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.box-content {
+    flex-grow: 1;
+}
+
+.slider-container {
+    width: 48%;
+    /* Slider genişlik ayarı */
+    max-height: 60vh;
+    /* Maksimum yükseklik */
+    overflow: hidden;
+    /* Taşma durumunda içeriği kes */
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Resmi slider boyutuna sığdır */
+    transition: transform 0.5s ease;
+}
+
+.thumbnails {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Thumbnail arka plan rengi */
+}
+
+.thumbnail {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.thumbnail-image {
+    width: 50px;
+    height: auto;
+    opacity: 0.6;
+    /* Seçili olmayan thumbnail opaklık */
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-image:hover {
+    opacity: 1;
+    /* Mouse üzerine gelince opaklık */
+}
+
+.thumbnail.active .thumbnail-image {
+    opacity: 1;
+    /* Seçili thumbnail opaklık */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin-left: 1rem;
+    background-color: none;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        overflow-y: auto;
+        /* Mobilde scroll olmasını sağla */
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-content {
+        width: 90%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content-group{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-links {
+        display: none;
+    }
+
+    .mobile-contact-links {
+        background-color: #dfe6e9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        width: 90%;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .contact-link{
+        width: 110px !important;
+    }
+
+    .mobile-contact-button {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .header-web-image{
+        display: none;
+    }
+
+    .header-mobile-image{
+        display: block;
+        max-width: 330px;
+        height: 250px !important;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        /* Mobilde sıralama düzeni */
+        align-items: center;
+    }
+
+    .boxes {
+        width: 100%;
+        /* Mobilde kutular genişliği */
+        padding: 1rem;
+    }
+
+    .box {
+        width: 100%;
+        /* Mobilde kutu genişliği */
+    }
+
+    .slider-container {
+        width: 100%;
+        /* Mobilde slider genişliği */
+        max-height: unset;
+        /* Mobilde maksimum yükseklik kaldır */
+        margin-top: 1rem;
+    }
+
+    .footer {
+        max-width: 375px;
+    }
+}
