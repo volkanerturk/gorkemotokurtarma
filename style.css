@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: math;
 }
 
 .app-container {
@@ -16,7 +16,7 @@ body {
     text-align: center;
     display: flex;
     max-width: 100%;
-    background-color:#b2bec3;
+    background-color: #b2bec3;
 }
 
 .header-content {
@@ -43,9 +43,9 @@ body {
     align-items: start;
     justify-content: center;
     gap: 0px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
+
 .contact-links {
     display: flex;
     align-items: space-between;
@@ -58,7 +58,8 @@ body {
     width: 900px;
 }
 
-.header-mobile-image, .mobile-contact-links {
+.header-mobile-image,
+.mobile-contact-links {
     display: none;
 }
 
@@ -102,7 +103,7 @@ body {
 }
 
 .box {
-    background-color:#dfe6e9;
+    background-color: #dfe6e9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
@@ -210,7 +211,7 @@ body {
         flex-direction: column;
     }
 
-    .header-content-group{
+    .header-content-group {
         display: flex;
         width: 100%;
         align-items: center;
@@ -226,7 +227,6 @@ body {
         border-radius: 8px;
         padding: 1rem;
         width: 90%;
-        margin-bottom: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
@@ -234,7 +234,7 @@ body {
         flex-direction: column;
     }
 
-    .contact-link{
+    .contact-link {
         width: 110px !important;
     }
 
@@ -245,11 +245,11 @@ body {
         justify-content: space-around;
     }
 
-    .header-web-image{
+    .header-web-image {
         display: none;
     }
 
-    .header-mobile-image{
+    .header-mobile-image {
         display: block;
         max-width: 330px;
         height: 250px !important;
